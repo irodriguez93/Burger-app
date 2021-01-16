@@ -52,6 +52,7 @@ class BurgerBuilder extends Component {
     });
     this.updatePurchaseState(updatedIngredients);
   };
+
   removeIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type];
     if (oldCount <= 0) {
@@ -71,12 +72,15 @@ class BurgerBuilder extends Component {
     });
     this.updatePurchaseState(updatedIngredients);
   };
+
   puchaseHandler = () => {
     this.setState({ purchasing: true });
   };
+
   puchaseCanceledHandler = () => {
     this.setState({ purchasing: false });
   };
+  
   puchaseContinueHandler = () => {
     this.setState({ loading: true });
     //alert("Order Sucessful");
