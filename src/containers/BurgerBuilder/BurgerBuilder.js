@@ -14,6 +14,7 @@ const INGREDIENT_PRICES = {
   meat: 1.3,
   bacon: 0.7,
 };
+
 class BurgerBuilder extends Component {
   state = {
     ingredients: {
@@ -100,6 +101,7 @@ class BurgerBuilder extends Component {
       },
       deliveryMethos: "fastest",
     };
+
     axios
       .post("/orders.json", order)
       .then((response) => {
